@@ -1,0 +1,86 @@
+<html class=''>
+<head><meta charset='UTF-8'><meta name="robots" content="noindex"><link rel="canonical" href="http://codepen.io/ace-subido/pen/Cuiep" />
+
+<style class="cp-pen-styles">body{
+  background: #eee !important;
+}
+
+.wrapper {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.form-signin {
+  max-width: 380px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 30px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  font-size: 16px;
+  height: auto;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email address"] {
+  margin-bottom: 20px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: -1px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+  .form-signin input[type="confirm password"] {
+  margin-bottom: -1px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+</style></head><body>
+<div class="wrapper">
+    <form class="form-signin">      
+      <form accept-charset="UTF-8" action="/us" class="new_u"
+      id="new_u" method="post">
+  <input name="utf8" type="hidden" value="&#x2713;" />
+  <input name="authenticity_token" type="hidden"
+         value="NNb6+J/j46LcrgYUC60wQ2titMuJQ5lLqyAbnbAUkdo=" />
+      <h2 class="form-signin-heading">Please Signup</h2>        
+       <input type="text" id="u_name" class="form-control" name="u[name]" placeholder="Name" required="" ="" />
+      <input type="email" id="u_email" name="u[email]" class="form-control" placeholder="Email Address" required="" ="" />
+      <input type="password" id="u_password" name="u[password]" class="form-control" placeholder="Password" required=""/>
+      <input type="password" id="u_password_confirmation"
+         name="u[password_confirmation]" class="form-control" placeholder="Confirm Password" required=""/>
+    </p>
+    <p>
+      <label class="checkbox">
+        <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
+      </label>
+      <label class="checkbox">
+        <input type="checkbox" value="termsandcondag" id="termsandcondag" name="termsandcondag"> I agree to the <a href= "/terms"> terms and conditions  </a>
+      </label> 
+    <%= form_for(@u) do |f| %>
+      <%= f.submit "Create my account"  , class: "btn btn-lg btn-primary btn-block" %>
+    <% end %>
+      
+    </form>
+  </div>
+
+<script src='http://codepen.io/assets/editor/live/css_live_relload_init.js'></script>
+</body></html>
+
+   
