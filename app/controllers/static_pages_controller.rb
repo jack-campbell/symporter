@@ -14,6 +14,6 @@ class StaticPagesController < ApplicationController
   def contact
   end
 
-  def login
+  def signup
   end
 end

@@ -1,4 +1,6 @@
 <html class=''>
+    <link href="assets/bootstrap-theme.min.css" rel="stylesheet">
+  <link href="assets/custom.css" rel="stylesheet">
 <head><meta charset='UTF-8'><meta name="robots" content="noindex"><link rel="canonical" href="http://codepen.io/ace-subido/pen/Cuiep" />
 
 <style class="cp-pen-styles">body{
@@ -80,9 +82,11 @@ body {
     
  <%= f.label :password_confirmation, "Confirmation" %>
       <%= f.password_field :password_confirmation, class: 'form-control' %>
-<div class="wrapper">
+    <div class="wrapper">
+      
       <%= f.submit "Create my account", class: "btn  btn-primary" %>
     </div>
+    
     <% end %>
   </div>
  </div>

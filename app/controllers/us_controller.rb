@@ -19,6 +19,7 @@ class UsController < ApplicationController
   def create
     @u = U.new(u_params)    # Not the final implementation!
     if @u.save
+      log_in @u
       flash[:success] = "Welcome to Symporter"
       redirect_to @u
     else

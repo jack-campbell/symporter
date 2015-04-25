@@ -18,5 +18,6 @@ class UsSignupTest < ActionDispatch::IntegrationTest
     end
     assert_template 'us/new'
       assert_template 'us/show'
+       assert is_logged_in?
   end
 end
