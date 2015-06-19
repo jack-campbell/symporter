@@ -8,7 +8,8 @@ class U < ActiveRecord::Base
                      uniqueness: { case_sensitive: false }
   #doesn't i.d .. errors
  has_secure_password
-  validates :password, length: { minimum: 6 }
+    validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
+
   
    def U.digest(string)
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :

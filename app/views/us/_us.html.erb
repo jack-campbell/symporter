@@ -1,0 +1,4 @@
+<% if current_u.admin? && !current_u?(u) %>
+    | <%= link_to "delete", u, method: :delete,
+                                  data: { confirm: "You sure?" } %>
+  <% end %>

@@ -1,5 +1,17 @@
 class UsController < ApplicationController
-
+  before_action :logged_in_u, only: [:index, :edit, :update, :destroy]
+  before_action :correct_u,   only: [:edit, :update]
+    before_action :admin_u,     only: :destroy
+  
+  def destroy
+    U.find(params[:id]).destroy
+    flash[:success] = "User deleted"
+    redirect_to us_url
+  end
+  
+  def index
+    @us = U.all
+  end
   def show
     @u = U.find(params[:id])
   end
@@ -14,7 +26,20 @@ class UsController < ApplicationController
       params.require(:u).permit(:name, :email, :password,
                                    :password_confirmation)
     end
-   
+    def logged_in_u
+      unless logged_in?
+        store_location
+        flash[:danger] = "Please log in."
+        redirect_to login_url
+      end
+    end
+    def correct_u
+      @u = U.find(params[:id])
+      redirect_to(root_url) unless current_u?(@u)
+    end
+  def admin_u
+      redirect_to(root_url) unless current_u.admin?
+    end
   public
   def create
     @u = U.new(u_params)    # Not the final implementation!
@@ -24,7 +49,21 @@ class UsController < ApplicationController
       redirect_to @u
     else
       render 'new'
+    end 
+    
+   def edit
+    @u = U.find(params[:id])
+  end
+
+  def update
+    @u = U.find(params[:id])
+    if @u.update_attributes(u_params)
+        flash[:success] = "Profile updated"
+      redirect_to @u
+    else
+      render 'edit'
     end
+  end
     
     
     

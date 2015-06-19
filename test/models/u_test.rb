@@ -45,10 +45,10 @@ end
     end
     
       test "email addresses should be unique" do
-    duplicate_user = @u.dup
-    duplicate_user.email = @u.email.upcase
+    duplicate_u = @u.dup
+    duplicate_u.email = @u.email.upcase
     @u.save
-    assert_not duplicate_user.valid?
+    assert_not duplicate_u.valid?
   end
     
      test "password should have a minimum length" do
@@ -56,7 +56,7 @@ end
     assert_not @u.valid?
   end
     test "authenticated? should return false for a user with nil digest" do
-    assert_not @user.authenticated?('')
+    assert_not @u.authenticated?('')
   end
 end
 end
