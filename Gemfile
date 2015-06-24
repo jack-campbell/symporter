@@ -36,7 +36,7 @@ gem 'spring', '~> 1.0.0'
  gem 'capistrano-rails', group: :development
 
 # Use debugger
-gem 'debugger', group: [:development, :test]
+gem 'byebug'
 
 gem 'will_paginate',           '3.0.7'
 gem 'bootstrap-will_paginate', '0.0.10'
