@@ -44,9 +44,9 @@ class UsController < ApplicationController
   def create
     @u = U.new(u_params)    # Not the final implementation!
     if @u.save
-      log_in @u
-      flash[:success] = "Welcome to Symporter"
-      redirect_to @u
+      @u.send_activation_email
+      flash[:info] = "Please check your email to activate your account."
+      redirect_to root_url
     else
       render 'new'
     end 

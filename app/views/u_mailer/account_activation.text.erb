@@ -1,0 +1,4 @@
+Hi <%= @u.name %>,
+Welcome to Symporter! Click on the link below to activate your account:
+
+<%= edit_account_activation_url(@u.activation_token, email: @u.email) %>

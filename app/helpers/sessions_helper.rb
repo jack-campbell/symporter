@@ -15,13 +15,13 @@ module SessionsHelper
       @current_u ||= U.find_by(id: u_id)
     elsif (u_id = cookies.signed[:u_id])
       u = U.find_by(id: u_id)
-      if u && u.authenticated?(cookies[:remember_token])
+       if u && u.authenticated?(:remember, cookies[:remember_token])
         log_in u
         @current_u = u
       end
     end
   end
-def logged_in?
+  def logged_in?
     !current_u.nil?
   end
   def log_out

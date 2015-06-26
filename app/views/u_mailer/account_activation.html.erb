@@ -1,0 +1,9 @@
+<h1>Symporter</h1>
+
+<p>Hi <%= @u.name %>,</p>
+
+<p>
+Welcome to Symporter! Click on the link below to activate your account:
+</p>
+
+<%= link_to "Activate", edit_account_activation_url(@u.activation_token, email: @u.email) %>
