@@ -12,6 +12,15 @@
       </h1>
     </section>
   </aside>
+    <div class="col-md-8">
+      <% if @u.products.any? %>
+      <h3>Products (<%= @u.products.count %>)</h3>
+      <ol class="products">
+        <%= render @products %>
+      </ol>
+      <%= will_paginate @products %>
+    <% end %>
+  </div>
 </div>
   </div>
      

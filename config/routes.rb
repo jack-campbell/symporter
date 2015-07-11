@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'product/new'
+
   get 'password_resets/new'
 
   get 'password_resets/edit'
@@ -11,6 +13,7 @@ Rails.application.routes.draw do
   get 'static_pages/contact'
   get 'us/new'
   get 'sessions/new'
+ 
 
   root 'static_pages#home'
   get '/about' => 'static_pages#about'
@@ -21,7 +24,11 @@ Rails.application.routes.draw do
   get    '/login'   => 'sessions#new'
   post   '/login'   => 'sessions#create'
   delete '/logout'  => 'sessions#destroy'
+  get    '/upload'   => 'products#new'
+  get '/products'=> 'products#index'
+  post '/products'=> 'products#create'
   resources  :us
+  resources :products, only: [:create, :destroy]
   resources :account_activations, only: [:edit]
    resources :password_resets,     only: [:new, :create, :edit, :update]
   # The priority is based upon order of creation: first created -> highest priority.

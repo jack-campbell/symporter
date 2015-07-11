@@ -11,10 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150626145407) do
+ActiveRecord::Schema.define(version: 20150703183211) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  create_table "prods", force: true do |t|
+    t.text     "content"
+    t.integer  "u_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "prods", ["u_id"], name: "index_prods_on_u_id"
+
+# Could not dump table "products" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
   create_table "us", force: true do |t|
     t.string   "name"
@@ -31,6 +40,6 @@ ActiveRecord::Schema.define(version: 20150626145407) do
     t.datetime "reset_sent_at"
   end
 
-  add_index "us", ["email"], name: "index_us_on_email", unique: true, using: :btree
+  add_index "us", ["email"], name: "index_us_on_email", unique: true
 
 end

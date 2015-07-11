@@ -17,7 +17,7 @@ class UMailer < ActionMailer::Base
   #
   #   en.u_mailer.password_reset.subject
   #
-  def password_reset
+  def password_reset(u)
     @greeting = "Hi"
     @u = u
     mail to: u.email, subject: "Password reset"

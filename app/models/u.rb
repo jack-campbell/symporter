@@ -1,4 +1,5 @@
 class U < ActiveRecord::Base
+  has_many :products, dependent: :destroy
   attr_accessor :remember_token, :activation_token, :reset_token
   before_save :downcase_email
   before_create :create_activation_digest
@@ -11,6 +12,9 @@ class U < ActiveRecord::Base
  has_secure_password
     validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
 
+  def feed
+    Product.where("u_id = ?", id)
+  end
   
    def U.digest(string)
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
@@ -50,7 +54,7 @@ class U < ActiveRecord::Base
   end
   
   def send_password_reset_email
-    UserMailer.password_reset(self).deliver
+    UMailer.password_reset(self).deliver
   end
   
   def create_reset_digest
@@ -62,5 +66,6 @@ class U < ActiveRecord::Base
   def password_reset_expired?
     reset_sent_at < 2.hours.ago
   end
+  
   
 end

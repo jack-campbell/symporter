@@ -58,5 +58,11 @@ end
     test "authenticated? should return false for a user with nil digest" do
     assert_not @u.authenticated?(:remember, '')
   end
+    test "associated products should be destroyed" do
+    @u.save
+      @u.products.create!(content: "Lorem ipsum")
+    assert_difference 'Micropost.count', -1 do
+      @u.destroy
+    end
 end
 end

@@ -14,6 +14,7 @@ class UsController < ApplicationController
   end
   def show
     @u = U.find(params[:id])
+    @products = @u.products.paginate(page: params[:page])
   end
 
   def new
@@ -64,6 +65,7 @@ class UsController < ApplicationController
       render 'edit'
     end
   end
+    
     
     
     
