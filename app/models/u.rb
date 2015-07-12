@@ -67,5 +67,8 @@ class U < ActiveRecord::Base
     reset_sent_at < 2.hours.ago
   end
   
+  def self.search(query)
+    where("name like ?", "%#{query}%") 
+end
   
 end

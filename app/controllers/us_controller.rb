@@ -11,7 +11,13 @@ class UsController < ApplicationController
   
   def index
     @us = U.all
+    if params[:search]
+    @us = U.search(params[:search]).order("created_at DESC")
+    else
+    @us = U.all.order('created_at DESC')
+    end
   end
+  
   def show
     @u = U.find(params[:id])
     @products = @u.products.paginate(page: params[:page])
