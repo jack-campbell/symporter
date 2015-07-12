@@ -4,9 +4,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails' 
 # Use sqlite3 as the database for Active Record
-group :development, :test do
-  gem "sqlite3" 
-end 
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -51,9 +49,9 @@ gem 'mini_magick',             '3.8.0'
 gem 'fog',                     '1.23.0'
  gem "paperclip", "~> 2.3" 
 
-group :production do
+
   gem 'pg', '0.15.1'
  
-end
+
 
  gem 'rails_12factor'
