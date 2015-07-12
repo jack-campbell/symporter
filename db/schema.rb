@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20150703183211) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "prods", force: true do |t|
     t.text     "content"
     t.integer  "u_id"
@@ -20,10 +23,21 @@ ActiveRecord::Schema.define(version: 20150703183211) do
     t.datetime "updated_at"
   end
 
-  add_index "prods", ["u_id"], name: "index_prods_on_u_id"
+  add_index "prods", ["u_id"], name: "index_prods_on_u_id", using: :btree
 
-# Could not dump table "products" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
+  create_table "products", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "description"
+    t.string   "attach_file_name"
+    t.string   "attach_content_type"
+    t.integer  "attach_file_size"
+    t.datetime "attach_updated_at"
+    t.integer  "u_id"
+  end
+
+  add_index "products", ["u_id"], name: "index_products_on_u_id", using: :btree
 
   create_table "us", force: true do |t|
     t.string   "name"
@@ -40,6 +54,6 @@ ActiveRecord::Schema.define(version: 20150703183211) do
     t.datetime "reset_sent_at"
   end
 
-  add_index "us", ["email"], name: "index_us_on_email", unique: true
+  add_index "us", ["email"], name: "index_us_on_email", unique: true, using: :btree
 
 end
