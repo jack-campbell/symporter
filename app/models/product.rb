@@ -8,4 +8,7 @@ class Product < ActiveRecord::Base
     has_attached_file :pic, :styles => 
         { :medium => "300x300>", :thumb => "100x100>" }
    has_attached_file :attach
+  def self.search(query)
+    where("name like ?", "%#{query}%") 
+end
 end
