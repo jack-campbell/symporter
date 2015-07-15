@@ -3,8 +3,8 @@
 <head>
   <title>Symporter</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <link href="assets/bootstrap-theme.min.css.erb" rel="stylesheet_link_tag">
-  <link href="assets/custom.css.erb" rel="stylesheet_link_tag">
+  <link href="/assets/bootstrap-theme.min.css.erb" rel="stylesheet">
+  <link href="/assets/custom.css.erb" rel="stylesheet">
   <link href='//fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
   <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
       <style>
@@ -111,6 +111,7 @@
       </div>
   </footer>
       <%= debug(params) if Rails.env.development? %>
+<%= javascript_include_tag "application" %>
     <script src="jquery.min.js.erb"></script>
     <script src="bootstrap.min.js.erb"></script>
     <script src="docs.min.js.erb"></script>
