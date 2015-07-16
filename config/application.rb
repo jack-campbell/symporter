@@ -8,6 +8,28 @@ Bundler.require(*Rails.groups)
 
 module Symporter
   class Application < Rails::Application
- 
+  config.assets.precompile += [
+      'carousel.css.erb'
+    ]
+    config.assets.precompile += [
+      'bootstrap-theme.min.css.erb'
+    ]
+    config.assets.precompile += [
+      'custom.css.erb'
+    ]
+    config.assets.precompile += [
+      'bootstrap.min.js.erb'
+    ]
+    config.assets.precompile += [
+      'jquery.min.js.erb'
+    ]
+    config.assets.precompile += [
+      'docs.min.js.erb'
+    ]
+      config.assets.precompile += [
+      'ie10-viewport-bug-workaround.js'
+    ]
+    
+    
   end
 end

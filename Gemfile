@@ -53,5 +53,6 @@ gem 'fog',                     '1.23.0'
 
   gem 'pg', '0.15.1'
  
-
- gem 'rails_12factor'
+group :production do
+      gem 'rails_12factor'
+    end
