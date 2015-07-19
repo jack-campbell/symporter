@@ -3,6 +3,7 @@
 <head>
   <title>Symporter</title>
   <%= stylesheet_link_tag    "application", media: "all", 'data-turbolinks-track' => true %>
+ <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
  <link href='//fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
  <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
@@ -16,7 +17,7 @@
       p { font-family: 'Open Sans', serif; font-weight: 400; }
       body { font-family: 'Montserrat', serif; font-weight: 400; }
     </style>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+ 
   <%= csrf_meta_tags %>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,39 +29,9 @@
 <body>
 
   <% flash.each do |message_type, message| %>
-    <p>
-    <p>
-                     <p>
-                         <p>
-                           <p>
-            <p>
-                     <p>
-                         <p>
-                           <p>
-            <p>
-                     <p>
-                         <p>
-                           <p>
-            <p>
-                     <p>
-                         <p>
+    
         <div class="alert alert-<%= message_type %>"><%= message %></div>
-   </p>
-             </p>
-          </p>
-        </p>
-</p>
-             </p>
-          </p>
-        </p>
-</p>
-             </p>
-          </p>
-        </p>
-</p>
-             </p>
-          </p>
-        </p>
+  
       <% end %>
    
 
@@ -142,12 +113,9 @@
       </div>
   </footer>
       <%= debug(params) if Rails.env.development? %>
-<%= javascript_include_tag "jquery.min.js.erb" %>
-    <script src="jquery.min.js.erb"></script>
-<%= javascript_include_tag "bootstrap.min.js.erb" %>
-    <script src="bootstrap.min.js.erb"></script>
-<%= javascript_include_tag "docs.min.js.erb" %>
-    <script src="docs.min.js.erb"></script>
+
+
+
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <%= javascript_include_tag "ie10-viewport-bug-workaround.js" %>
     <script src="ie10-viewport-bug-workaround.js"></script>

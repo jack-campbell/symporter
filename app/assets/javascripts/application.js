@@ -16,4 +16,8 @@
 //= require_tree .
 //= require bootstrap.min
 
-require_tree . 
+= require bootstrap.min
+= require docs.min
+= require npm
+= require bootstrap
+= ie10-viewport-bug-workaround
