@@ -1,3 +1,15 @@
+
+@import "bootstrap";
+
+/* mixins, variables, etc. */
+
+$grayMediumLight: #eaeaea;
+$gray-darker: #222;
+$gray-dark: #333;
+$gray: #555;
+$gray-light: #999;
+$gray-lighter: #eee;
+
 body {
   min-height: 2000px;
   padding-top: 50px;
@@ -124,12 +136,16 @@ aside {
   }
 }
 
+  
+
+
 .products {
+ 
   list-style: none;
   margin: 0;
   li {
     overflow: auto;
     padding: 10px 0;
-    border-bottom: 1px solid $gray;
+    border-bottom: 1px solid $gray-lighter;
   }
 }
