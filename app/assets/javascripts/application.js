@@ -20,4 +20,4 @@
 = require docs.min
 = require npm
 = require bootstrap
-= ie10-viewport-bug-workaround
+= ie10-viewport-bug-workaround.js.erb
