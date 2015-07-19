@@ -14,8 +14,8 @@
  *= require_self
  *= require bootstrap.min
  */
-@import  "bootstrap";
- @import  "bootstrap.min";
+@import "bootstrap";
+@import "bootstrap-theme";
    @import "custom";
    @import "carousel";
  
