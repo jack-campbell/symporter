@@ -1,5 +1,5 @@
 class Product < ActiveRecord::Base
-  attr_accessor :content,
+  attr_accessor :content
   validates :name, presence: true
   validates :u_id, presence: true
   validates :description, presence: true, length: { maximum: 10000 }
