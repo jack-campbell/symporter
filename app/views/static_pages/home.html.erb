@@ -1,6 +1,18 @@
 <head>
   <%= stylesheet_link_tag    "static_pages", media: "all", 'data-turbolinks-track' => true %>
- 
+  <script src="//code.jquery.com/jquery-1.11.3.min.js" ></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js" ></script>
+  
+ <script>
+// Load this when the DOM is ready
+$(function(){
+  // You used .myCarousel here. 
+  // That's the class selector not the id selector,
+  // which is #myCarousel
+  $('#myCarousel').carousel();
+});
+   
+</script>
   </head>  
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
