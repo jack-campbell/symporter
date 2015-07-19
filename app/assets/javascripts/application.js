@@ -15,15 +15,10 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap.min
-
- require bootstrap.min
- require docs.min
- require npm
- require bootstrap
+//= require docs.min
+//= require npm
 
 $(function(){
-  // You used .myCarousel here. 
-  // That's the class selector not the id selector,
-  // which is #myCarousel
+  
   $('#myCarousel').carousel();
 });
