@@ -3,9 +3,9 @@
 <head>
   <title>Symporter</title>
   <%= stylesheet_link_tag    "bootstrap-theme.min.css.erb", media: "all", 'data-turbolinks-track' => true %>
- 
+  <link href="/assets/bootstrap-theme.min.css.erb" rel="stylesheet" >
     <%= stylesheet_link_tag    "custom.css.erb", media: "all", 'data-turbolinks-track' => true %>
-
+  <link href="/assets/custom.css.erb" rel="stylesheet" >
  <link href='//fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
  <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
       <style>
@@ -113,13 +113,13 @@
   </footer>
       <%= debug(params) if Rails.env.development? %>
 <%= javascript_include_tag "jquery.min.js.erb" %>
-
+    <script src="jquery.min.js.erb"></script>
 <%= javascript_include_tag "bootstrap.min.js.erb" %>
-
+    <script src="bootstrap.min.js.erb"></script>
 <%= javascript_include_tag "docs.min.js.erb" %>
-
+    <script src="docs.min.js.erb"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <%= javascript_include_tag "ie10-viewport-bug-workaround.js" %>
-  
+    <script src="ie10-viewport-bug-workaround.js"></script>
 </body>
 </html>
