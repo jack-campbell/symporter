@@ -33,9 +33,11 @@ class U < ActiveRecord::Base
     return false if digest.nil?
     BCrypt::Password.new(digest).is_password?(token)
   end
+  
   def forget
     update_attribute(:remember_digest, nil)
   end
+  
   def downcase_email
     self.email = email.downcase
   end

@@ -38,4 +38,9 @@ module SessionsHelper
   def store_location
     session[:forwarding_url] = request.url if request.get?
   end
+  def forget(u)
+    u.forget
+    cookies.delete(:u_id)
+    cookies.delete(:remember_token)
+  end
 end
