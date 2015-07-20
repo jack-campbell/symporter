@@ -8,6 +8,7 @@ class ProductsController < ApplicationController
       redirect_to root_url
     else
       render 'static_pages/home'
+      flash[:danger] = "Error in uploading product."
     end
   end 
   
@@ -33,6 +34,6 @@ end
 
   
   def product_params
-    params.require(:product).permit(:content)
+    params.require(:product).permit(:description)
     end
 end 

@@ -7,11 +7,12 @@ class ProductControllerTest < ActionController::TestCase
   end
 def setup
   @product = products(:orange)
+  @product = @u.microposts.build(description: "Lorem ipsum")
   end
 
   test "should redirect create when not logged in" do
     assert_no_difference 'Product.count' do
-      post :create, product: { content: "Lorem ipsum" }
+      post :create, product: { description: "Lorem ipsum" }
     end
     assert_redirected_to login_url
   end
