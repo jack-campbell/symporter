@@ -4,7 +4,8 @@
   <title>Symporter</title>
   <%= stylesheet_link_tag    "application", media: "all", 'data-turbolinks-track' => true %>
  <%= javascript_include_tag 'application.js', 'data-turbolinks-track' => true %>
-
+ 
+  
  <link href='//fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
  <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
    <link href='//fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
@@ -37,7 +38,8 @@
    
 
 <!-- NAVBAR ================================================== -->
-<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="bannerContainer">
+<nav class=" navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -88,7 +90,7 @@
         <% else %>
                <form class="navbar-form navbar-right" FORM METHOD="LINK" ACTION="/login">
             <div class="form-group">
-            <button type="submit" class="btn btn-primary">Sign in</button>
+            <button type="submit" class="btn">Sign in</button>
                  </div>
           </form>
                  <ul class="nav navbar-nav navbar-right">
@@ -99,6 +101,7 @@
         </div>
       </div>
     </nav>
+</div>
  
 <%= yield %>
     <footer class="footer">
