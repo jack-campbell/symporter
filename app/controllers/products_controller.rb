@@ -7,7 +7,7 @@ class ProductsController < ApplicationController
       flash[:success] = "Product Uploaded!"
       redirect_to root_url
     else
-      render 'static_pages/home'
+      render 'static_pages/products'
       flash[:danger] = "Error uploading product."
     end
   end 

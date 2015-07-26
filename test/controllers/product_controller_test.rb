@@ -5,9 +5,10 @@ class ProductControllerTest < ActionController::TestCase
     get :new
     assert_response :success
   end
+  
 def setup
   @product = products(:orange)
-  @product = @u.microposts.build(description: "Lorem ipsum")
+  @product = @u.products.build(description: "Lorem ipsum")
   end
 
   test "should redirect create when not logged in" do
@@ -18,7 +19,7 @@ def setup
   end
 
   test "should redirect destroy when not logged in" do
-    assert_no_difference 'Micropost.count' do
+    assert_no_difference 'Product.count' do
       delete :destroy, id: @product
     end
     assert_redirected_to login_url
