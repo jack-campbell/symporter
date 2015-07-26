@@ -6,9 +6,10 @@
 
 <ul class="products">
   <% @products.each do |product| %>
-    <li>
-      <%= link_to product.name, product %>
-    </li>
+    <ol class="products">
+        <%= render @products %>
+      </ol>
+      <%= will_paginate @products %>
   <% end %>
 </ul>
   </body>
