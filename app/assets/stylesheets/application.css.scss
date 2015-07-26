@@ -18,9 +18,36 @@
 @import "bootstrap-theme";
    @import "custom";
 @import "carousel"; 
-.btn-primary{
-     background: transparent;
+@import "cover";
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+  color: transparent;
+  text-shadow: none; /* Prevent inheritence from `body` */
   background-color: transparent;
-     border: 1px solid #000000;
-  color : rgba(0,0,0,0.1);
+  border: 1px solid #fff;
+}
+
+.carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 1.4;
+     color: #00FFFF; 
   }
+
+  .featurette-heading {
+    font-size: 18px;
+  }
+
+
+html,
+body {
+  background-color: #eee;
+}
+body {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+}
+ 
+
