@@ -2,9 +2,6 @@
   <span class="u"><%= link_to product.u.name, product.u %></span>
   <span class="name"><%= product.name %></span>
   <span class="description"><%= product.description %></span>
-  <a href="<%= @product.attach.url %> ">
-             <b> File attached </b></a>
-  <br/>
   <span class="timestamp">
     Uploaded <%= time_ago_in_words(product.created_at) %> ago.
   </span>
