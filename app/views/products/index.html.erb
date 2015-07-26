@@ -6,10 +6,13 @@
 
 <ul class="products">
   <% @products.each do |product| %>
-    <ol class="products">
-        <%= render @products %>
-      </ol>
-      <%= will_paginate @products %>
+    <li>
+     <span class="u"><%= link_to product.u.name, product.u %></span>
+  <span class="name"><%= product.name %></span>
+  <span class="description"><%= product.description %></span>
+  <span class="timestamp">
+    Uploaded <%= time_ago_in_words(product.created_at) %> ago.
+    </li>
   <% end %>
 </ul>
   </body>
