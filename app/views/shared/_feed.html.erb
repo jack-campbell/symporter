@@ -5,11 +5,13 @@
 <ul class="products">
   <% @products.each do |product| %>
     <li>
+      <p style="text-align: center;color: #1E90FF; padding:6px;  background-color: white; border: black 2px solid">
      <span class="u"><%= link_to product.u.name, product.u %></span>
   <span class="name"><%= product.name %></span>
   <span class="description"><%= product.description %></span>
   <span class="timestamp">
     Uploaded <%= time_ago_in_words(product.created_at) %> ago.
+    </p>
     </li>
   <% end %>
 </ul>
