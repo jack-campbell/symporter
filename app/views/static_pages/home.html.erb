@@ -1,7 +1,19 @@
 <head>
   <script src="//code.jquery.com/jquery-1.7.1.min.js" ></script>
   <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js" ></script>
-  
+  <style>
+    .carousel .item {
+  height: 800px;
+  background-color: #777;
+}
+    .carousel {
+  height: 800px;
+  margin-bottom: 60px;
+}
+   
+/* Since positioning the image, we need to help out the caption */
+
+  </style>
  <script>
 // Load this when the DOM is ready
 $(function(){
@@ -92,26 +104,11 @@ $(function(){
 
       <hr class="featurette-divider">
 
-     
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive" src="/images/Employment_Thinker_256.png" alt="Generic placeholder image">
-        </div>
-        <div class="col-md-7">
-          <h2 class="featurette-heading">Make money from products. <span class="text-muted" style="color: #1E90FF">Not paper. </span></h2>
-          <p class="lead">Research revenue is driven by publications. Why not generate revenue by selling science you have made ? </p>
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
 
       <div class="row featurette">
         <div class="col-md-7">
-          <h2 class="featurette-heading">Trade with labs, hobbyists and companies. <span class="text-muted" style="color: #1E90FF">Stop keeping trade secrets. </span></h2>
-          <p class="lead">Do you think your idea or method is valuable enough to be kept a secret ? Why not capitalize on it and help other research groups re-produce your results? </p>
+          <h3>Recent Uploads</h3>
+      <%= render 'shared/feed' %> 
         </div>
         <div class="col-md-5">
           <img class="featurette-image img-responsive" src="/images/Business.png" alt="Generic placeholder image">
@@ -131,5 +128,6 @@ $(function(){
     </div>
  <div class="col-md-7">
      </div>
+<hr class="featurette-divider">
 <hr class="featurette-divider">
     </div>

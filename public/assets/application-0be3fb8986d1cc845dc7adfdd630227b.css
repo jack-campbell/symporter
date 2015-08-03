@@ -2040,7 +2040,7 @@ mark,
 
 /* line 1327, /home/nitrous/code/symporter/vendor/assets/stylesheets/bootstrap.css.scss */
 .text-muted {
-  color: #777;
+  color: #00FFFF;
 }
 
 /* line 1330, /home/nitrous/code/symporter/vendor/assets/stylesheets/bootstrap.css.scss */
@@ -11508,7 +11508,7 @@ mark,
 
 /* line 1327, /home/nitrous/code/symporter/vendor/assets/stylesheets/bootstrap.css.scss */
 .text-muted {
-  color: #777;
+  color: #00FFFF;
 }
 
 /* line 1330, /home/nitrous/code/symporter/vendor/assets/stylesheets/bootstrap.css.scss */
@@ -21435,7 +21435,7 @@ mark,
 
 /* line 1327, /home/nitrous/code/symporter/vendor/assets/stylesheets/bootstrap.css.scss */
 .text-muted {
-  color: #777;
+  color: #00FFFF;
 }
 
 /* line 1330, /home/nitrous/code/symporter/vendor/assets/stylesheets/bootstrap.css.scss */
@@ -30916,7 +30916,7 @@ mark,
 
 /* line 1327, /home/nitrous/code/symporter/vendor/assets/stylesheets/bootstrap.css.scss */
 .text-muted {
-  color: #777;
+  color: #00FFFF;
 }
 
 /* line 1330, /home/nitrous/code/symporter/vendor/assets/stylesheets/bootstrap.css.scss */
@@ -38338,92 +38338,6 @@ img.clipped {
     margin-top: 120px;
   }
 }
-/*
- * Globals
- */
-/* Links */
-/* line 9, /home/nitrous/code/symporter/vendor/assets/stylesheets/cover.css.scss */
-a,
-a:focus,
-a:hover {
-  color: #fff;
-}
-
-/* Custom default button */
-/*
- * Base structure
- */
-/* Extra markup and styles for table-esque vertical and horizontal centering */
-/* line 24, /home/nitrous/code/symporter/vendor/assets/stylesheets/cover.css.scss */
-.site-wrapper {
-  display: table;
-  width: 100%;
-  height: 100%;
-  /* For at least Firefox */
-  min-height: 100%;
-  -webkit-box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
-  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
-}
-
-/* line 32, /home/nitrous/code/symporter/vendor/assets/stylesheets/cover.css.scss */
-.site-wrapper-inner {
-  display: table-cell;
-  vertical-align: top;
-}
-
-/* line 36, /home/nitrous/code/symporter/vendor/assets/stylesheets/cover.css.scss */
-.cover-container {
-  margin-right: auto;
-  margin-left: auto;
-}
-
-/* Padding for spacing */
-/* line 42, /home/nitrous/code/symporter/vendor/assets/stylesheets/cover.css.scss */
-.inner {
-  padding: 30px;
-}
-
-/*
- * Cover
- */
-/* line 53, /home/nitrous/code/symporter/vendor/assets/stylesheets/cover.css.scss */
-.cover {
-  padding: 0 20px;
-}
-
-/* line 56, /home/nitrous/code/symporter/vendor/assets/stylesheets/cover.css.scss */
-.cover .btn-lg {
-  padding: 10px 20px;
-  font-weight: bold;
-}
-
-/*
- * Footer
- */
-/*
- * Affix and center
- */
-@media (min-width: 768px) {
-  /* Pull out the header and footer */
-  /* Start the vertical centering */
-  /* line 78, /home/nitrous/code/symporter/vendor/assets/stylesheets/cover.css.scss */
-  .site-wrapper-inner {
-    vertical-align: middle;
-  }
-
-  /* Handle the widths */
-  /* line 83, /home/nitrous/code/symporter/vendor/assets/stylesheets/cover.css.scss */
-  .cover-container {
-    width: 100%;
-    /* Must be percentage or pixels for horizontal alignment */
-  }
-}
-@media (min-width: 992px) {
-  /* line 89, /home/nitrous/code/symporter/vendor/assets/stylesheets/cover.css.scss */
-  .cover-container {
-    width: 700px;
-  }
-}
 /* line 25, /home/nitrous/code/symporter/app/assets/stylesheets/application.css.scss */
 .btn-default,
 .btn-default:hover,
@@ -38435,23 +38349,60 @@ a:hover {
   border: 1px solid #fff;
 }
 
-/* line 31, /home/nitrous/code/symporter/app/assets/stylesheets/application.css.scss */
-.navbar-default {
-  background-color: transparent;
-  color: transparent;
+/* line 32, /home/nitrous/code/symporter/app/assets/stylesheets/application.css.scss */
+.carousel-caption p {
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 1.4;
+  color: #00FFFF;
 }
 
-/* line 36, /home/nitrous/code/symporter/app/assets/stylesheets/application.css.scss */
+/* line 39, /home/nitrous/code/symporter/app/assets/stylesheets/application.css.scss */
+.featurette-heading {
+  font-size: 18px;
+}
+
+/* line 43, /home/nitrous/code/symporter/app/assets/stylesheets/application.css.scss */
+.carousel {
+  height: 700px;
+  margin-bottom: 60px;
+}
+
+/* Since positioning the image, we need to help out the caption */
+/* line 34, /home/nitrous/code/symporter/vendor/assets/stylesheets/carousel.css.scss */
+/* line 50, /home/nitrous/code/symporter/app/assets/stylesheets/application.css.scss */
+.carousel-caption {
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+/* line 39, /home/nitrous/code/symporter/vendor/assets/stylesheets/carousel.css.scss */
+/* line 56, /home/nitrous/code/symporter/app/assets/stylesheets/application.css.scss */
+.carousel .item {
+  height: 700px;
+  background-color: #777;
+}
+
+/* line 43, /home/nitrous/code/symporter/vendor/assets/stylesheets/carousel.css.scss */
+/* line 62, /home/nitrous/code/symporter/app/assets/stylesheets/application.css.scss */
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 700px;
+}
+
+/* line 70, /home/nitrous/code/symporter/app/assets/stylesheets/application.css.scss */
 html,
 body {
   background-color: #eee;
 }
 
-/* line 39, /home/nitrous/code/symporter/app/assets/stylesheets/application.css.scss */
+/* line 73, /home/nitrous/code/symporter/app/assets/stylesheets/application.css.scss */
 body {
   color: #fff;
-  text-align: center;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 /*!
  * Bootstrap v3.3.2 (http://getbootstrap.com)

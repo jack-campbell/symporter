@@ -8,6 +8,7 @@ class ProductsController < ApplicationController
       redirect_to root_url
     else
       render 'static_pages/products'
+      @feed_items = []
       flash[:danger] = "Error uploading product."
     end
   end 

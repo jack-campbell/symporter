@@ -9,13 +9,13 @@ Bundler.require(*Rails.groups)
 module Symporter
   class Application < Rails::Application
   config.assets.precompile += [
-      'carousel.css.erb'
+      'carousel.css.scss'
     ]
     config.assets.precompile += [
-      'bootstrap-theme.min.css.erb'
+      'bootstrap-theme.min.css.scss'
     ]
     config.assets.precompile += [
-      'custom.css.erb'
+      'custom.css.scss'
     ]
     config.assets.precompile += [
       'bootstrap.min.js.erb'

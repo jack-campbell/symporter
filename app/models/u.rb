@@ -13,7 +13,7 @@ class U < ActiveRecord::Base
     validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
 
   def feed
-    Product.where("u_id = ?", id)
+    products
   end
   
    def U.digest(string)

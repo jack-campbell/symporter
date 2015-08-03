@@ -1,10 +1,12 @@
 class StaticPagesController < ApplicationController
   def home
- 
-    if logged_in?
-      @product  = current_u.products.build
-      @feed_items = current_u.feed.paginate(page: params[:page])
-    end
+     @products = Product.all
+  if params[:search]
+    @products = Product.search(params[:search]).order("created_at DESC")
+  else
+    @products = Product.all.order('created_at DESC')
+
+end
   end
 
   def about
