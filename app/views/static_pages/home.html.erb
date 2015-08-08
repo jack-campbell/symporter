@@ -10,10 +10,6 @@
   height: 800px;
   margin-bottom: 60px;
 }
-    body {
-  color: #fff;
-  text-shadow: 0 1px 3px rgba(0,0,0,.4);
-}
    
 /* Since positioning the image, we need to help out the caption */
 
@@ -110,13 +106,11 @@ $(function(){
 
 
       <div class="row featurette">
-         <div class="container" style="text-align: center;">
         <div class="col-md-7">
           <h3>Recent Uploads</h3>
       <%= render 'shared/feed' %> 
         </div>
-           </div>
-      <div class="col-md-4">
+         <div class="col-md-4" style="text-align: left;">
       <h3 style="color: #000033">Categories <small>By research </small></h3>
        <li><a href="/Bioc">Biochemistry</a></li>
         <li><a href="/Bio">Biology</a></li>
