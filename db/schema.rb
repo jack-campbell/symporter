@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150719193532) do
+ActiveRecord::Schema.define(version: 20150808232856) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20150719193532) do
     t.datetime "attach_updated_at"
     t.integer  "u_id"
     t.text     "content"
+    t.text     "category"
   end
 
   add_index "products", ["u_id"], name: "index_products_on_u_id", using: :btree
@@ -53,6 +54,7 @@ ActiveRecord::Schema.define(version: 20150719193532) do
     t.datetime "activated_at"
     t.string   "reset_digest"
     t.datetime "reset_sent_at"
+    t.text     "institution"
   end
 
   add_index "us", ["email"], name: "index_us_on_email", unique: true, using: :btree
