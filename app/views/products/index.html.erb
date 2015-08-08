@@ -8,7 +8,19 @@
 <% provide(:title, 'All products') %>
   <div class="container" style="text-align: center;">
 <h1 style="color: #000033">All Products</h1>
-
+ <div class="row">
+   <div class="col-md-1"></div>
+      <div class="col-md-4">
+      <h3 style="color: #000033">Categories <small>By research </small></h3>
+       <li><a href="/Bioc">Biochemistry</a></li>
+        <li><a href="/Bio">Biology</a></li>
+        <li><a href="/Chem">Chemistry</a></li>
+    <li><a href="/Chemeng">Chemical Engineering </a></li>
+    <li><a href="/EE">Electrical Engineering </a></li>
+        <li><a href="/ME">Mechanical Engineering </a></li>
+    <li><a href="/Phy">Physics </a></li>
+      </div>
+   </div>
 <ul class="products">
   <% @products.each do |product| %>
     <li>
@@ -21,18 +33,7 @@
   <% end %>
 </ul>
       </div>
-    <div class="row">
-   <div class="col-md-1"></div>
-      <div class="col-md-4">
-      <h3 style="color: #000033">Categories <small>By research </small></h3>
-       <li><a href="/Bioc">Biochemistry</a></li>
-        <li><a href="/Bio">Biology</a></li>
-        <li><a href="/Chem">Chemistry</a></li>
-    <li><a href="/Chemeng">Chemical Engineering </a></li>
-    <li><a href="/EE">Electrical Engineering </a></li>
-        <li><a href="/ME">Mechanical Engineering </a></li>
-    <li><a href="/Phy">Physics </a></li>
-      </div>
+   
       
      </div>   
   </body>
