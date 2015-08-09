@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150808232856) do
+ActiveRecord::Schema.define(version: 20150808233043) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(version: 20150808232856) do
     t.string   "reset_digest"
     t.datetime "reset_sent_at"
     t.text     "institution"
+    t.text     "city"
   end
 
   add_index "us", ["email"], name: "index_us_on_email", unique: true, using: :btree

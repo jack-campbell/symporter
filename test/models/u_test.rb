@@ -22,6 +22,14 @@ end
     @u.name = "a" * 51
     assert_not @u.valid?
   end
+  test "city should not be too long" do
+    @u.city = "a" * 51
+    assert_not @u.valid?
+  end
+  test "institution should not be too long" do
+    @u.institution = "a" * 51
+    assert_not @u.valid?
+  end
 
   test "email should not be too long" do
     @u.email = "a" * 244 + "@example.com"
