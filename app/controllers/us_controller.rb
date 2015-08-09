@@ -31,7 +31,7 @@ class UsController < ApplicationController
 
     def u_params
       params.require(:u).permit(:name, :email, :password,
-                                   :password_confirmation)
+                                   :password_confirmation, :city, :institution)
     end
     def logged_in_u
       unless logged_in?

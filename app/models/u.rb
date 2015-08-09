@@ -5,6 +5,7 @@ class U < ActiveRecord::Base
   before_create :create_activation_digest
    validates :institution,  presence: true, length: { maximum: 50 }
    validates :city,  presence: true, length: { maximum: 50 }
+   attr_accessor :city, :institution
  validates :name,  presence: true, length: { maximum: 50 }
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, presence: true, length: { maximum: 255 },
