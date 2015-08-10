@@ -33,6 +33,7 @@ class UsController < ApplicationController
       params.require(:u).permit(:name, :email, :password,
                                    :password_confirmation, :city, :institution)
     end
+  
     def logged_in_u
       unless logged_in?
         store_location
@@ -47,9 +48,7 @@ class UsController < ApplicationController
   def admin_u
       redirect_to(root_url) unless current_u.admin?
     end
-  
   public
-  
   def create
     @u = U.new(u_params)    # Not the final implementation!
     if @u.save
@@ -58,7 +57,7 @@ class UsController < ApplicationController
       redirect_to root_url
     else
       render 'new'
-    end 
+    end
   end
     
    def edit
