@@ -59,6 +59,7 @@ class UsController < ApplicationController
     else
       render 'new'
     end 
+  end
     
    def edit
     @u = U.find(params[:id])
