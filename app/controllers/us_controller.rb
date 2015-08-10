@@ -9,6 +9,20 @@ class UsController < ApplicationController
     redirect_to us_url
   end
   
+   def edit
+    @u = U.find(params[:id])
+  end
+
+  def update
+    @u = U.find(params[:id])
+    if @u.update_attributes(u_params)
+        flash[:success] = "Profile updated"
+      redirect_to @u
+    else
+      render 'edit'
+    end
+  end
+  
   def index
     @us = U.all
     if params[:search]
@@ -59,19 +73,7 @@ class UsController < ApplicationController
     end
     
     
-   def edit
-    @u = U.find(params[:id])
-  end
-
-  def update
-    @u = U.find(params[:id])
-    if @u.update_attributes(u_params)
-        flash[:success] = "Profile updated"
-      redirect_to @u
-    else
-      render 'edit'
-    end
-  end
+  
     
     
     
