@@ -47,7 +47,9 @@ class UsController < ApplicationController
   def admin_u
       redirect_to(root_url) unless current_u.admin?
     end
+  
   public
+  
   def create
     @u = U.new(u_params)    # Not the final implementation!
     if @u.save

@@ -12,6 +12,8 @@ class UsEditTest < ActionDispatch::IntegrationTest
     assert_template 'us/edit'
     patch u_path(@u), u: { name:  "",
                                     email: "foo@invalid",
+                                    city: "goo",
+                                    institution: "gar",
                                     password:              "foo",
                                     password_confirmation: "bar" }
     assert_template 'us/edit'
@@ -25,6 +27,8 @@ class UsEditTest < ActionDispatch::IntegrationTest
     email = "foo@bar.com"
     patch u_path(@u), u: { name:  name,
                                     email: email,
+                                     city: city,
+                                    institution: institution,
                                     password:              "",
                                     password_confirmation: "" }
     assert_not flash.empty?
@@ -42,6 +46,8 @@ class UsEditTest < ActionDispatch::IntegrationTest
     email = "foo@bar.com"
     patch u_path(@u), u: { name:  name,
                                     email: email,
+                                     city: city,
+                                    institution: institution,
                                     password:              "",
                                     password_confirmation: "" }
     assert_not flash.empty?
