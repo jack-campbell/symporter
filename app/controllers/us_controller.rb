@@ -39,7 +39,7 @@ class UsController < ApplicationController
         flash[:danger] = "Please log in."
         redirect_to login_url
       end
-    
+    end
     def correct_u
       @u = U.find(params[:id])
       redirect_to(root_url) unless current_u?(@u)
