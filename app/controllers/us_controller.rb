@@ -33,14 +33,13 @@ class UsController < ApplicationController
       params.require(:u).permit(:name, :email, :password,
                                    :password_confirmation, :city, :institution)
     end
-  
     def logged_in_u
       unless logged_in?
         store_location
         flash[:danger] = "Please log in."
         redirect_to login_url
       end
-    
+    end
     def correct_u
       @u = U.find(params[:id])
       redirect_to(root_url) unless current_u?(@u)
