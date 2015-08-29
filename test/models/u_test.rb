@@ -3,7 +3,7 @@ require 'test_helper'
 class UTest < ActiveSupport::TestCase
 def setup
   @u = U.new(name: "Example U", email: "user@example.com",
-    password: "foobar", password_confirmation: "foobar", city: "London", institution: "ICL")
+                  password: "foobar", password_confirmation: "foobar")
   end
 
   test "should be valid" do
@@ -18,30 +18,24 @@ def setup
     assert_not @u.valid?
 end
   
-   test "city should be present" do
-    @u.city = "     "
-    assert_not @u.valid?
-end
-  
-  test "Insitution should be present" do
-    @u.institution = "     "
-    assert_not @u.valid?
-end
-  
   test "name should not be too long" do
     @u.name = "a" * 51
     assert_not @u.valid?
   end
   test "city should not be too long" do
-    @u.city = "a" * 50
+    @u.city = "a" * 51
     assert_not @u.valid?
   end
   test "institution should not be too long" do
+<<<<<<< HEAD
 <<<<<<< HEAD
     @u.institution = "a" * 51
 =======
     @u.institution = "a" * 50
 >>>>>>> parent of d0f3f8a... Fic city and inst and maybe product name
+=======
+    @u.institution = "a" * 51
+>>>>>>> parent of 344992b... Fic city and inst
     assert_not @u.valid?
   end
 
