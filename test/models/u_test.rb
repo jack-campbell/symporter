@@ -29,10 +29,14 @@ end
   test "institution should not be too long" do
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     @u.institution = "a" * 51
 =======
     @u.institution = "a" * 50
 >>>>>>> parent of d0f3f8a... Fic city and inst and maybe product name
+=======
+    @u.institution = "a" * 51
+>>>>>>> parent of 344992b... Fic city and inst
 =======
     @u.institution = "a" * 51
 >>>>>>> parent of 344992b... Fic city and inst
