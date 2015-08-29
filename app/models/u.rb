@@ -1,6 +1,7 @@
 class U < ActiveRecord::Base
   has_many :products, dependent: :destroy
-  attr_accessor :remember_token, :activation_token, :reset_token, :city, :institution,
+  attr_accessor :remember_token, :activation_token, :reset_token
+  attr_accessor  :city, :institution
   before_save :downcase_email
   before_create :create_activation_digest
   
