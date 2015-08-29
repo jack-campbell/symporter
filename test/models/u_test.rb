@@ -33,11 +33,15 @@ end
     assert_not @u.valid?
   end
   test "city should not be too long" do
-    @u.city = "a" * 51
+    @u.city = "a" * 50
     assert_not @u.valid?
   end
   test "institution should not be too long" do
+<<<<<<< HEAD
     @u.institution = "a" * 51
+=======
+    @u.institution = "a" * 50
+>>>>>>> parent of d0f3f8a... Fic city and inst and maybe product name
     assert_not @u.valid?
   end
 
@@ -79,7 +83,7 @@ end
     test "associated products should be destroyed" do
     @u.save
       @u.products.create!(content: "Lorem ipsum")
-      assert_difference 'Product.count', -1 do
+    assert_difference 'Micropost.count', -1 do
       @u.destroy
     end
 end

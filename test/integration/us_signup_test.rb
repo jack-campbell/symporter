@@ -12,7 +12,7 @@ class UsSignupTest < ActionDispatch::IntegrationTest
       post us_path, u: { name:  "",
                                email: "user@invalid",
                                password:              "foo",
-        password_confirmation: "bar", city: "London", institution: "ICL" }
+                               password_confirmation: "bar" }
     end 
     assert_template 'us/new'
     assert_select 'div#error_explanation'
@@ -24,8 +24,7 @@ class UsSignupTest < ActionDispatch::IntegrationTest
       post us_path, u: { name:  "Example User",
                                email: "user@example.com",
                                password:              "password",
-                               password_confirmation: "password",
-      city: "London", institution: "ICL"   }
+                               password_confirmation: "password" }
     end
      
   assert_equal 1, ActionMailer::Base.deliveries.size

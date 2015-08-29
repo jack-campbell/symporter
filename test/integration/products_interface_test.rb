@@ -7,13 +7,13 @@ class ProductsInterfaceTest < ActionDispatch::IntegrationTest
     assert_select 'div.pagination'
     # Invalid submission
    assert_no_difference 'Product.count' do
-     post products_path, product: { description: "", name: "BLT" }
+     post products_path, product: { content: "" }
     end
     assert_select 'div#error_explanation'
     # Valid submission
     description = "This product really ties the room together"
    assert_difference 'Product.count', 1 do
-     post products_path, product: { description: "", name: "BLT"  }
+     post products_path, product: { content: content }
     end
     assert_redirected_to root_url
     follow_redirect!

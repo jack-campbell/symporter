@@ -15,7 +15,7 @@ class UsEditTest < ActionDispatch::IntegrationTest
                                     city: "goo",
                                     institution: "gar",
                                     password:              "foo",
-                                    password_confirmation: "bar", city: "London", institution: "ICL"  }
+                                    password_confirmation: "bar" }
     assert_template 'us/edit'
   end
   
