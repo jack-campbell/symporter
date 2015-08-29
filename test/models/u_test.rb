@@ -3,7 +3,7 @@ require 'test_helper'
 class UTest < ActiveSupport::TestCase
 def setup
   @u = U.new(name: "Example U", email: "user@example.com",
-                  password: "foobar", password_confirmation: "foobar")
+    password: "foobar", password_confirmation: "foobar", city: "London", institution: "ICL")
   end
 
   test "should be valid" do
@@ -18,6 +18,16 @@ def setup
     assert_not @u.valid?
 end
   
+   test "city should be present" do
+    @u.city = "     "
+    assert_not @u.valid?
+end
+  
+  test "Insitution should be present" do
+    @u.institution = "     "
+    assert_not @u.valid?
+end
+  
   test "name should not be too long" do
     @u.name = "a" * 51
     assert_not @u.valid?
@@ -27,19 +37,7 @@ end
     assert_not @u.valid?
   end
   test "institution should not be too long" do
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    @u.institution = "a" * 51
-=======
-    @u.institution = "a" * 50
->>>>>>> parent of d0f3f8a... Fic city and inst and maybe product name
-=======
-    @u.institution = "a" * 51
->>>>>>> parent of 344992b... Fic city and inst
-=======
-    @u.institution = "a" * 51
->>>>>>> parent of 344992b... Fic city and inst
+    @u.institution = "a" * 5
     assert_not @u.valid?
   end
 
@@ -81,7 +79,7 @@ end
     test "associated products should be destroyed" do
     @u.save
       @u.products.create!(content: "Lorem ipsum")
-    assert_difference 'Micropost.count', -1 do
+      assert_difference 'Product.count', -1 do
       @u.destroy
     end
 end
