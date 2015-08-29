@@ -2,47 +2,42 @@
 <% provide(:title, 'Create a new product') %>
 <body>
   <div class="container">
-<h1>New product upload</h1>
-
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <%= form_for(@product) do |f| %>
-      <%= f.label :name %>
-      <%= f.text_field :name, class: 'form-control' %>
-  <%= render 'shared/error_messages', object: f.object %>
+    <h1>New product upload</h1>
     <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-  <div class="field">
-  
-    <%= f.text_area :description, placeholder: "Describe your product" %>
-        </div>
-  </div>
-       </div>
+      <div class="col-md-6 col-md-offset-3">
+        <%= form_for(@product) do |f| %>
+        <%= f.label :name %>
+        <%= f.text_field :name, class: 'form-control' %>
+        <%= render 'shared/error_messages', object: f.object %>
         <div class="row">
-           <div class="col-md-6 col-md-offset-3">
-    Research category: 
-<select name="ddl">
-  <option value='' selected>Select a Category </option>
-<option value='Biochemistry'>Biochemistry</option>
-<option value='Biology'>Biology</option>
-<option value='Chemistry'>Chemistry</option>
-<option value='Chemeng'>Chemical Engineering</option>
-<option value='EE'>Electrical Engineering</option>
-  <option value='ME'>Mechanical Engineering</option>
-  <option value='Physics'>Physics</option>
-</select>
-               </div>
+          <div class="col-md-6 col-md-offset-3">
+            <div class="field"> 
+              <%= f.text_area :description, placeholder: "Describe your product" %>
+            </div>
           </div>
-     <div class="row">
-   
-    <b> Attach a file </b><br/>
-     <%= f.file_field :attach %>
-  
-         </div>
-
-    <%= f.submit "Upload your product", class: "btn btn-primary" %>
-    <% end %>
-  </div>
-</div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+            Research category: 
+            <select name="ddl">
+              <option value=''selected>Select a Category</option>
+              <option value='Biochemistry'>Biochemistry</option>
+              <option value='Biology'>Biology</option>
+              <option value='Chemistry'>Chemistry</option>
+              <option value='Chemeng'>Chemical Engineering</option>
+              <option value='EE'>Electrical Engineering</option>
+              <option value='ME'>Mechanical Engineering</option>
+              <option value='Physics'>Physics</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <b>Attach a file</b><br/>
+          <%= f.file_field :attach %>
+        </div>
+        <%= f.submit "Upload your product", class: "btn btn-primary" %>
+        <% end %>
+      </div>
     </div>
-  </body>
+  </div>
+</body>
